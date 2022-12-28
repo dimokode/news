@@ -1,0 +1,66 @@
+section {
+    padding-left: 10px;
+}
+
+section-block {
+	display: block;
+	padding-bottom: 10px;
+}
+
+section-block>section-header {
+	display: block;
+}
+
+section-block>section-header h3{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+section-block div {
+	display: inline-block;
+	padding-right: 3px;
+}
+
+
+
+
+
+section-group {
+	display: block;
+	padding-bottom: 10px;
+}
+
+section-group>section-header {
+	display: block;
+}
+
+section-group div {
+	display: inline-block;
+	padding-right: 3px;
+}
+
+
+section-group groupitem{
+	display: block;
+	background:#eee;
+	margin: 0 0 5px 15px;
+}
+section-group groupitem section-group groupitem{
+	display: block;
+	background: #ddd;
+	margin-bottom: 5px;
+}
+
+section-group h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+
+groupitem div{
+	vertical-align: top;
+}
+
+groupitem{
+	vertical-align: middle;
+}

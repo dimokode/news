@@ -1,0 +1,12 @@
+.db_panel {
+    border: 1px solid grey;
+    width: 40%;
+    min-height: 400px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.db_details {
+    border: 1px solid blue;
+}

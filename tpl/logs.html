@@ -1,0 +1,23 @@
+<h2>Logs</h2>
+<submenu>
+    <!--button class="w3-button w3-green" onclick="javascript:tasks.addTask();">Add</button-->
+</submenu>
+
+<logs-menu>
+    <div>
+        Found: <newsFound></newsFound>
+    </div>
+    <span>
+        Select:
+        <input type="checkbox" onclick="logs.toggleSelectAll(this)">
+    </span>
+    <span>
+        <select id="action">
+            <option value="">Select action</option>
+            <option value="delete">Delete</option>
+        </select>
+        <button class="w3-button w3-black" onclick="logs.doAction(document.getElementById('action').value);">Do</button>
+    </span>
+</logs-menu>
+
+<logs></logs>

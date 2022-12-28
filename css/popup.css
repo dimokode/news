@@ -1,0 +1,17 @@
+popup {
+    display: block;
+    position: fixed;
+    background: white;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+}
+
+popup>popup-content{
+    display: block;
+    position: static;
+    margin: 10px;
+    height: 100%;
+    overflow-y: scroll;
+}

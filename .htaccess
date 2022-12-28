@@ -1,0 +1,37 @@
+#------------------------------------------------------------------------------
+# This file provides server security limiting access to the localhost only.
+# Comment next four lines to deactivate. (Allows external access)
+#------------------------------------------------------------------------------
+
+#Order Deny,Allow
+#Deny from all
+#Allow from 127.0.0.1
+#Allow from ::1
+
+
+DirectoryIndex index.php
+
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /
+#RewriteBase /bitly
+#RewriteBase /%{REQUEST_URI}
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# supress php errors
+php_flag display_startup_errors 1
+php_flag display_errors  0
+php_flag html_errors  1
+php_value docref_root 0
+php_value docref_ext 0
+
+php_value display_errors 1
+php_value display_startup_errors 1
+php_value error_reporting E_ALL
+
+
+#RewriteRule ^/phpliteadmin/phpliteadmin.php$ /phpliteadmin/phpliteadmin.php [L]
+RewriteRule ^(.*?)$ index.php [L]

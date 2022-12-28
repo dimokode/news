@@ -1,0 +1,45 @@
+/*
+logger span {
+    display: block;
+}
+
+logger span>span {
+    display: inline;
+}
+*/
+
+
+
+logger {
+    display: inline-block;
+    border: 1px solid blue;
+    width : 100%;
+    vertical-align: top;
+}
+
+logger.hidden {
+    display : none;
+}
+
+
+logger>div.logger_element{
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+
+logger>div.logger_element span{
+    display : inline;
+}
+
+
+logger>div.logger_element span.margin{
+    display : inline;
+    margin-left: 10px;
+}
+
+task {
+    display: block;
+    border-bottom: 2px solid grey;
+    padding: 4px;
+}

@@ -1,0 +1,32 @@
+div.dropdown {
+	display: block;
+	position: absolute;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+/*
+div {
+	display: inline-block;
+}
+*/
+.dropdown>div.visible {
+	display: block;
+}
+
+.dropdown>div.hidden {
+	display: none;
+}
+
+
+.dropdown>div{
+	display:block;
+}
+
+.dropdown>div.selected {
+	background: yellow;
+}

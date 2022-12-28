@@ -1,0 +1,18 @@
+<h2>Utils</h2>
+<hr>
+<div>
+    <!--button class="w3-button w3-green" onclick="utils.showDBs();">DBs</button-->
+</div>
+<dbs>
+    <div id="db_target" class="db_panel">
+        <h2>Target DB</h2>
+        <select id="select_target_db" onchange="utils.selectDb(this, 'db_target_details')"></select>
+        <div id="db_target_details" class="db_details"></div>
+    </div>
+    <div style="display: inline-block;"><button class="w3-button w3-green" onclick="utils.mergeDBs();">< Merge <</button></div>
+    <div id="db_source" class="db_panel">
+        <h2>Source DB</h2>
+        <select id="select_source_db" onchange="utils.selectDb(this, 'db_source_details')"></select>
+        <div id="db_source_details" class="db_details"></div>
+    </div>
+</dbs>

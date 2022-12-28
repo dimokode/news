@@ -1,0 +1,33 @@
+.thumb {
+    position: relative;
+    display: inline-block;
+}
+
+
+.thumb_date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color : white;
+    font-size: 0.8em;
+}
+
+
+submenu {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border-top: 2px solid lightgrey;
+}
+
+search_menu>div {
+    display:  inline-block;
+}
+
+
+.task {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid lightgrey;
+}

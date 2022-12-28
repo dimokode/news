@@ -1,0 +1,14 @@
+paginator {
+	display: block;
+	padding: 20px;
+}
+
+
+paginator>button.rightIndent {
+	margin-right: 30px;
+}
+
+
+paginator>button.leftIndent {
+	margin-left: 30px;
+}

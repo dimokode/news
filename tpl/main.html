@@ -1,0 +1,54 @@
+
+<!--button class="w3-button w3-green" onclick="javascript:pages.show('parser.html');">Parser</button-->
+
+<!--button class="w3-button w3-green" onclick="javascript:jobs.show();">Job</button-->
+<button class="w3-button w3-pink" onclick="javascript:tasks.show();">Tasks</button>
+<button class="w3-button w3-amber" onclick="javascript:feeds.show();">Feeds</button>
+<button class="w3-button w3-blue" onclick="javascript:news.show();">News</button>
+<button class="w3-button w3-green" onclick="javascript:logs.show();">Logs</button>
+<button class="w3-button w3-green" onclick="javascript:utils.show();">Utils</button>
+<button class="w3-button w3-grey" onclick="javascript:test.sendRequest(this);">SendRequest</button>
+<!--button class="w3-button w3-blue" onclick="javascript:test.startLogger();">Test</button-->
+<!--button class="w3-button w3-grey" onclick="javascript:test.test2();">Test</button-->
+<!--button class="w3-button w3-grey" onclick="javascript:test.progressbar_test();">Progressbar Test</button-->
+<!--button class="w3-button w3-grey" onclick="javascript:test.logSaver();">Log saver</button-->
+<!--button class="w3-button w3-grey" onclick="javascript:test.doJob(this);">Test job</button>
+<button class="w3-button w3-grey" onclick="javascript:test.jobber(this);">Jobber</button>
+<button class="w3-button w3-grey" onclick="javascript:test2.start(this);">Test2</button>
+<button class="w3-button w3-grey" onclick="javascript:test.testSocket(this);">Test Socket</button-->
+<!--button class="w3-button w3-red" onclick="javascript:spider.startJob(this);">Spider</button-->
+<!--button class="w3-button w3-green" onclick="javascript:testlab.show(this);">Testlab</button-->
+<!--button class="w3-button w3-grey" onclick="javascript:spyne.sendRequest();">Spyne</button-->
+
+
+<div style="float:right;">
+<!--button class="w3-button w3-green" onclick="javascript:robot.doJob(this);">Job</button-->
+<button class="w3-button w3-grey"  onclick="javascript:window.open('/phplightadmin/phpliteadmin.php', '_blank')">DB</button>
+<button class="w3-button w3-black" style="float:right;" onclick="javascript:user.logout();">Logout</button>
+</div>
+<br>
+<!--textarea id="logger" cols="100" rows="10"></textarea-->
+<!--div id="logger"></div-->
+<pbJob></pbJob>
+<pbTask></pbTask>
+<div>
+<logger></logger>
+<logger2></logger2>
+</div>
+<content>
+    <div id="content">
+        
+    </div>
+</content>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+    //testlab.show();
+    //job.show();
+    news.show();
+    //tasks.show();
+    //feeds.show();
+    //logs.show();
+    //utils.show();
+});
+
+</script>

@@ -1,0 +1,19 @@
+
+
+logger2 {
+    display : none;
+    /*display: inline-block;*/
+    border: 1px solid blue;
+    width : 49%;
+    vertical-align: top;
+}
+
+task {
+    display: block;
+    border-bottom: 2px solid grey;
+    padding: 4px;
+}
+
+subtask {
+    display: block;
+}

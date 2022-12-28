@@ -1,0 +1,10 @@
+{
+    "baseURL": "https://ihodl.com",
+    "language": "en",
+    "parseURL": "https://ihodl.com/news/?page={%pageNumber%}",
+    "pageNumberFrom": "1",
+    "pageNumberTo": "1",
+    "category": "crypto",
+    "parserFilename": "ihodl_com.class.js",
+    "pause": "0"
+}

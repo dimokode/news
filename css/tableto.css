@@ -1,0 +1,33 @@
+.table {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.th {
+    display: table-cell;
+    padding: 10px;
+    font-weight: bold;
+    border : 1px solid grey;
+}
+
+.td {
+    display: table-cell;
+    padding: 10px;
+    border : 1px solid grey;
+}
+
+.clickable-cell {
+    color: blue;
+}
+
+.clickable-cell:hover {
+    cursor : pointer;
+    background : grey;
+}
+
+.selected-row{
+    background: yellow;
+}

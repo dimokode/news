@@ -1,0 +1,32 @@
+.logslist {
+	padding: 10px;
+}
+
+.logslist span {
+    display: inline-block;
+}
+
+.logslist:nth-child(even){
+	background: white;
+}
+
+.logslist:nth-child(odd){
+	background: #efefef;
+}
+
+.logslist>span {
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+
+.logslist .url{
+    
+    width: 500px;
+	
+}
+
+.logslist .success{
+    width: 40px;
+	
+}

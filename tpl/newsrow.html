@@ -1,0 +1,25 @@
+<div id="{%id%}" class="newslist">
+	<span><input type="checkbox" name="cb" value="{%url%}"></span>
+	<span class="clickable" data-item="{%id%}" onclick="news.deleteNews('{%url%}');"><i class="fa fa-close w3-text-red"></i></span>
+	<span class="date">{%date%}</span>
+	<!--span class="date">{%timestamp%}</span-->
+	<span class="category">{%category%}</span>
+	<span class="language">{%language%}</span>
+	<!--span>
+		<button class="w3-button w3-grey" onclick="booki.openLinkCard('{%id%}');">Edit</button>
+	</span-->
+	<span class="link_url" data-item="{%id%}">
+		<div>{%title%}</div>
+        
+		<div class="link">
+			<a href="{%url%}" target="_blank">{%url%}</a>
+		</div>
+        <div class="short_text">{%short_text%}</div>
+		<label>Bert</label>
+		<div class="sentiment">&#128550; = {%negative%}   &#128528; = {%neutral%}   &#128522; = {%positive%}</div>
+
+		<label>TF_IDF</label>
+		<div class="sentiment">&#128550; = {%t_negative%}   &#128528; = {%t_neutral%}   &#128522; = {%t_positive%}</div>
+	</span>
+    <span class="source">{%source%}</span>
+</div>

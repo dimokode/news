@@ -1,0 +1,73 @@
+<h1>NEWS</h1>
+<search_menu>
+    <form id="news_search_form" class="inline" onsubmit="return false;">
+        <div>
+            <legend>Keywords</legend>
+            <input type="text" name="s_keywords">
+        </div>
+        <div>
+            <legend>Source</legend>
+            <input type="text" name="s_source">
+        </div>
+        <div>
+            <legend>Start date</legend>
+            <input type="date" name="s_date_start" placeholder="dd-mm-yyyy">
+        </div>
+        <div>
+            <legend>End date</legend>
+            <input type="date" name="s_date_end" placeholder="dd-mm-yyyy">
+        </div>
+        <!--div>
+            <legend>Start position</legend>
+            <input type="text" name="s_position" value="0">
+        </div-->
+        <div>
+            <legend>Page</legend>
+            <input type="text" name="s_page" value="1">
+        </div>
+        <div>
+            <legend>Limit</legend>
+            <select name="s_limit" name="s_limit">
+                <option value="1" >1</option>
+                <option value="25" selected>25</option>
+                <option value="50" >50</option>
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div>
+            <button class="w3-button w3-green" onclick="news.showNews();">Show</button>
+            <button class="w3-button w3-orange" onclick="news.getApi();">Api</button>
+            <!--input type="button" class="w3-button w3-green" onclick="models.showModelsNext();" value="Next"-->
+        </div>
+    </form>
+</search_menu>
+
+
+
+<newslist-menu>
+    <div>
+        Found: <newsFound></newsFound>
+    </div>
+    <span>
+        Select:
+        <input type="checkbox" onclick="news.toggleSelectAll(this)">
+    </span>
+    <span>
+        <select id="action">
+            <option value="">Select action</option>
+            <option value="delete">Delete</option>
+        </select>
+        <button class="w3-button w3-black" onclick="news.doAction(document.getElementById('action').value);">Do</button>
+    </span>
+</newslist-menu>
+
+<paginator class="w3-center"></paginator>
+
+<newslist id="newslist"></newslist>
+
+<paginator class="w3-center"></paginator>
+
+<div style="float: right;">
+    <input type="button" class="w3-button w3-green" onclick="location.href='#newslist'" value="Up">
+    <input type="button" class="w3-button w3-green" onclick="news.showNewsNext();" value="Next">
+</div>

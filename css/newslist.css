@@ -1,0 +1,50 @@
+.newslist {
+	padding: 10px;
+}
+
+.newslist:nth-child(even){
+	background: white;
+}
+
+.newslist:nth-child(odd){
+	background: #efefef;
+}
+
+.newslist>span {
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+.newslist .short_text{
+	font-size: 0.95em;
+	font-style: italic;
+	
+}
+
+.newslist .sentiment{
+	font-size: 1.2em;	
+}
+
+
+.newslist>span.link_url {
+	display: inline-block;
+	width: 800px;
+	overflow: hidden;
+	/*text-overflow: clip;*/
+	white-space: wrap;
+	text-overflow: ellipsis;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.link {
+	color : darkblue;
+}
+
+

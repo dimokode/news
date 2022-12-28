@@ -1,0 +1,17 @@
+form {
+    padding: 10px;
+}
+
+form label {
+    font-size: 0.8em;
+    display : block;
+}
+
+form .form_element_error {
+    background: red;
+}
+
+
+form.inline>div {
+    display: inline-block;
+}

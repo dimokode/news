@@ -1,0 +1,10 @@
+{
+    "baseURL": "https://investing.com",
+    "language": "en",
+    "parseURL": "https://investing.com/news/cryptocurrency-news/{%pageNumber%}",
+    "pageNumberFrom": "21",
+    "pageNumberTo": "50",
+    "category": "crypto",
+    "parserFilename": "investing_com.class.js",
+    "pause": "5"
+}

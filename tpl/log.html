@@ -1,0 +1,13 @@
+<div>
+    <span>All:<all>0</all></span>
+    <span>Selected:<selected>0</selected></span>
+</div>
+<log-menu>
+    <span>
+        <button class="w3-button w3-green" onclick="logs.getSelected();">Get selected</button>
+        <button class="w3-button w3-pale-green" onclick="logs.filterItems({success: true});">True</button>
+        <button class="w3-button w3-pale-red" onclick="logs.filterItems({success: false});">False</button>
+        <button class="w3-button w3-grey" onclick="logs.deselectAll();">Deselect all</button>
+    </span>
+</log-menu>
+<log></log>
