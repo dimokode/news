@@ -66,3 +66,4 @@ temp
 phplightadmin
 logs/*.log
 db/*.sqlite
+db/arch/
