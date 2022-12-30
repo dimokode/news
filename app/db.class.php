@@ -20,12 +20,22 @@ class DB {
 			if(!isset($path_to_db)){
 				throw new Exception("Path to DB hasn't been specified");
 			}
+
+			if(!file_exists($path_to_db)){
+				throw new Exception("DB isn't exist: $path_to_db");
+			}
+
 			if(self::$instance === null){
+				//errlog("Instance isn't set");
 				self::$instance = new self($path_to_db);
+				//errlog(self::$instance);
 			}
 			return self::$instance;
 		}catch(Exception $e){
-			throw $e->getMessage();
+			//throw $e->getMessage();
+			//throw $e;
+			echo $e->getMessage();
+			throw $e;
 		}
 
 	}
@@ -37,11 +47,16 @@ class DB {
 
 			//$this->pdo = new \PDO("sqlite:" . Config::PATH_TO_SQLITE_FILE);
 		try{
-			$this->pdo = new \PDO("sqlite:" . $path_to_db);
+			//errlog($path_to_db);
+			$this->pdo = new PDO("sqlite:" . $path_to_db);
+			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->pdo->sqliteCreateFunction('u_lower', 'u_strtolower', 1);//register function for case insensitive search
 			$this->pdo->exec('PRAGMA journal_mode = wal;');
-		}catch(\PDOException $e){
-
+		}catch(PDOException $e){
+			//errlog("aadasd");
+			errlog($e->getMessage());
+			//wrlog(print_r($this->pdo->errorInfo(), true), 'pdo.txt');
+			//throw $e->getMessage();
 		}
 			
 		//}
@@ -67,6 +82,7 @@ class DB {
 			return $result;
 		}catch(Exception $e){
 			errlog($e->getMessage());
+			echo $e->getMessage();
 			throw $e;
 		}
 	}
@@ -88,6 +104,7 @@ class DB {
 		}catch(Exception $e){
 			//echo $e->getMessage();
 			error_log($e->getMessage(), 0);//save error message in php.log
+			echo $e->getMessage();
 			return;
 		}
 
@@ -115,25 +132,31 @@ class DB {
 
 
 static public function queryPDO($sql, $data) {
-	$obj = self::$instance;
-	$sth = $obj->pdo->prepare($sql);
-	//var_dump($sth);
-	if(!$sth){
-		echo "ERROR prepare<br>";
-		wrlog(print_r($obj->pdo->errorInfo(), true), 'pdo.txt');
-		return;
-	}
-	//var_dump($sth);
-	$r = $sth->execute($data);
-	//var_dump($sth);
-	
-	if(!$r){
-		echo "ERROR execute<br>";
-		wrlog(print_r($sth->errorInfo(), true), 'pdo.txt');
-		return;
-	}
+	try{
+		$obj = self::$instance;
+		$sth = $obj->pdo->prepare($sql);
+		//var_dump($sth);
+		if(!$sth){
+			echo "ERROR prepare<br>";
+			wrlog(print_r($obj->pdo->errorInfo(), true), 'pdo.txt');
+			return;
+		}
+		//var_dump($sth);
+		$r = $sth->execute($data);
+		//var_dump($sth);
 		
-	return $sth;
+		if(!$r){
+			echo "ERROR execute<br>";
+			wrlog(print_r($sth->errorInfo(), true), 'pdo.txt');
+			return;
+		}
+			
+		return $sth;
+	}catch(PDOException $e){
+		errlog($e->getMessage());
+		return;
+	}
+
 }
 
 
