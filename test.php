@@ -1,11 +1,10 @@
 <?
-require_once("../config.php");
-$path_to_file = ROOT_DIR."/db/test.txt";
-echo $path_to_file."<br>";
+use DevCoder;
 
+(new DotEnv(__DIR__ . '/.env'))->load();
 
-$f = fopen($path_to_file, "a+");
-fwrite($f, date("Y-m-d H:i:s")."\n");
-fclose($f);
-echo "ok";
+echo getenv('APP_ENV');
+// dev
+echo getenv('DATABASE_DNS')
+// mysql:host=localhost;dbname=test;
 ?>
