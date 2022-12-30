@@ -53,6 +53,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+*.log
 
 # environment file
 .env
@@ -60,9 +61,8 @@ Thumbs.db
 # from me
 *.txt
 
-testlab
-download
-temp
-logs/*.log
-db/*.sqlite
-db/arch/
+/testlab
+/download
+/temp
+/db/*.sqlite
+/db/arch/
