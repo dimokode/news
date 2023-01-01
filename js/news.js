@@ -31,9 +31,11 @@ async function showNews(page = null){
             item.neutral = Number(item.neutral).toFixed(2);
             item.positive = Number(item.positive).toFixed(2);
 
+            /*
             item.t_negative = Number(item.t_negative).toFixed(2);
             item.t_neutral = Number(item.t_neutral).toFixed(2);
             item.t_positive = Number(item.t_positive).toFixed(2);
+            */
             //console.log(date);
             return Object.assign(item, {date}, {id: _generateNewsId(item.url)});
         });
