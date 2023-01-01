@@ -12,7 +12,7 @@ define("DATA_DIR", ROOT_DIR.'/data');
 define("TESTLAB_DIR", ROOT_DIR.'/testlab');
 define("TASKS_DIR", ROOT_DIR.'/tasks');
 define("MODELS_DIR_URL", '/models');
-define("PATH_TO_DB", ROOT_DIR.'/db');
+//define("PATH_TO_DB", ROOT_DIR.'/db');
 define("PATH_TO_CONFIG", ROOT_DIR.'/config');
 //define("FORMS_DIR", ROOT_DIR.'/forms');
 //define("PATH_TO_SQLITE_FILE", ROOT_DIR.'/db/news.sqlite');
@@ -40,6 +40,7 @@ spl_autoload_register(function ($classname) {
 
 //define("DOMAINNAME", getenv('DOMAINNAME'));
 define("PATH_TO_SQLITE_FILE", ROOT_DIR.getenv('PATH_TO_SQLITE_FILE'));
+define("PATH_TO_DB", ROOT_DIR.getenv('PATH_TO_DB'));
 //echo PATH_TO_SQLITE_FILE;
 
 

@@ -46,16 +46,16 @@ class News{
             #this query has been used for two models bert and tf_idf
             //$sql = "SELECT n.*, t.negative AS t_negative, t.neutral AS t_neutral, t.positive AS t_positive, b.* FROM news AS n INNER JOIN tf_idf AS t ON n.url=t.url INNER JOIN bert AS b ON n.url=b.url $sql_where ORDER BY date DESC LIMIT $s_start, $s_limit";
             # !WARNING this query returns only news with sentiment
-            //$sql = "SELECT $s_fields FROM news AS n INNER JOIN tf_idf AS t ON n.url=t.url $sql_where ORDER BY date DESC LIMIT $s_start, $s_limit";
-            $sql = "SELECT $s_fields FROM news $sql_where ORDER BY date DESC LIMIT $s_start, $s_limit";
+            $sql = "SELECT $s_fields FROM news AS n INNER JOIN tf_idf AS t ON n.url=t.url $sql_where ORDER BY date DESC LIMIT $s_start, $s_limit";
+            //$sql = "SELECT $s_fields FROM news $sql_where ORDER BY date DESC LIMIT $s_start, $s_limit";
             //wrlog($sql);
             $sth = DB::query($sql);
             $news = DB::fetchAll($sth);
             
             $ans['success'] = true;
             $ans['s_limit'] = $s_limit;
-            //$ans['count'] = self::getCount("SELECT COUNT(*) as count FROM news AS n INNER JOIN tf_idf AS t ON n.url=t.url $sql_where");
-            $ans['count'] = self::getCount("SELECT COUNT(*) as count FROM news $sql_where");
+            $ans['count'] = self::getCount("SELECT COUNT(*) as count FROM news AS n INNER JOIN tf_idf AS t ON n.url=t.url $sql_where");
+            //$ans['count'] = self::getCount("SELECT COUNT(*) as count FROM news $sql_where");
             $ans['news'] = $news;
 
         }catch(Exception $e){
